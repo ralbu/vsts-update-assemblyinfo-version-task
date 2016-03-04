@@ -1,0 +1,62 @@
+{
+    "id": "52BB1DBF-FBCF-41E6-94EF-50A1FBF36FAF",
+    "name": "updateversion",
+    "friendlyName": "Update AssemblyInfo version",
+    "description": "Update AssemblyInfo version",
+    "helpMarkDown": "[More Information](http://go.microsoft.com/fwlink/?LinkID=613733)",
+    "category": "Utility",
+    "visibility": [
+                  "Build"
+                  ],    
+    "author": "Ruslan Albu",
+    "version": {
+        "Major": 0,
+        "Minor": 9,
+        "Patch": 5
+    },
+    "demands": [
+        "DotNetFramework"
+    ],
+    "inputs": [
+        {
+            "name": "sourceDirectory",
+            "type": "filePath",
+            "label": "Source",
+            "defaultValue":"",
+            "required": true,
+            "helpMarkDown": "Relative path to the solution folder or to the folder which AssemblyInfo file should be updated."
+        },
+        {
+            "name": "assemblyVersion",
+            "type": "string",
+            "label": "AssemblyVersion",
+            "defaultValue":"",
+            "required":false,
+            "helpMarkDown": "AssemblyVersion value. Leave empty if you don't want to update this value."
+        },
+        {
+            "name": "assemblyFileVersion",
+            "type": "string",
+            "label": "AssemblyFileVersion",
+            "defaultValue":"",
+            "required":false,
+            "helpMarkDown": "AssemblyFileVersion value. Leave empty if you don't want to update this value."
+        },
+        {
+            "name": "assemblyInformationalVersion",
+            "type": "string",
+            "label": "AssemblyInformationalVersion",
+            "defaultValue":"",
+            "required":false,
+            "helpMarkDown": "AssemblyInformationalVersion value. Leave empty if you don't want to update this value."
+        }
+    ],
+    "instanceNameFormat": "Update AssemblyInfo in $(sourceDirectory)",
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\update-version.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}

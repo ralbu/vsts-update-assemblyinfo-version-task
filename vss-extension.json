@@ -1,0 +1,59 @@
+{
+    "manifestVersion": 1,
+    "id": "updateversion",
+    "name": "Update AssemblyInfo version",
+    "version": "0.9.5",
+    "public": false,
+    "publisher": "Ruslan",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Task to update AssemblyInfo version",
+    "categories": [
+        "Build and release"
+    ],
+    "tags": [
+        "release",
+        "build",
+        "version",
+        "replace",
+        "update",
+        "AssemblyInfo",
+        "AssemblyFileVersion",
+        "AssemblyInformationalVersion"
+    ],
+    "links": {
+        "learn": {
+            "uri": "https://github.com/ralbu#readme"
+        },
+        "support": {
+            "uri": "https://github.com/ralbu/issues"  
+        }
+    },
+    "icons": {
+        "default": "images/update-version.jpg"
+    },
+    "branding": {
+        "color": "#1C3272",
+        "theme": "dark"
+    },
+    "files": [
+        {
+            "path": "task"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "updateversion-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "task"
+            }
+        }
+    ]
+}
